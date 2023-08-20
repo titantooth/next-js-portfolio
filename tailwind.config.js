@@ -24,6 +24,7 @@ module.exports = {
       boxShadow: {
         "3xl": "0 0 30px 10px rgba(255,255,255,0.3)",
         "black-xl": "0 0 30px 10px rgba(0,0,0,0.5)",
+        "black-md": "0 0 10px rgba(0,0,0,0.5)",
       },
       fontFamily: {
         burtons: "burtons",

@@ -48,11 +48,11 @@ export default function Home() {
             <h2 className="text-4xl font-bold py-2 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
               Soroosh Rabiee
             </h2>
-            <h3 className="text-xl py-2 font-bold">
+            <h3 className="text-xl py-2 font-bold dark:text-stone-900">
               Developer & UI/UX designer
             </h3>
-            <div className="bg-white mt-10 p-5 shadow-3xl rounded-md max-w-[480px]">
-              <p className="text-md py-2 leading-8 text-gray-900">
+            <div className="bg-white mt-10 p-5 shadow-3xl rounded-md max-w-[480px] dark:bg-slate-100 dark:shadow-black-md">
+              <p className="text-md py-2 leading-8 text-gray-900 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
                 molestias fuga aperiam ab quisquam, nesciunt mollitia facere
                 harum repellat quis atque vero dolorum iusto fugit voluptatibus
@@ -82,10 +82,10 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-4xl py-10 text-center font-sans">
+            <h3 className="text-4xl py-10 text-center dark:text-stone-900">
               My Services
             </h3>
-            <p className="text-md py-2 leading-8 text-gray-300 text-center">
+            <p className="text-md py-2 leading-8 text-gray-300 text-center dark:text-stone-900">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
               eos quia, blanditiis nisi quae,
             </p>
