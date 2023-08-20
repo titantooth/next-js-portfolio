@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import {
@@ -9,17 +10,28 @@ import deved from "../public/dev-ed-wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
+import web1 from "../public/web1.png";
+import web2 from "../public/web2.png";
+import web3 from "../public/web3.png";
+import web4 from "../public/web4.png";
+import web5 from "../public/web5.png";
+import web6 from "../public/web6.png";
+import { useState } from "react";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <>
-      <main className="bg-stone-800">
+    <div className={darkMode ? "dark" : ""}>
+      <main className="bg-stone-800 dark:bg-slate-300">
         <section>
-          <nav className=" items-center p-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-min-10 flex justify-between">
+          <nav className=" opacity-90 fixed w-full items-center p-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-min-10 flex justify-between">
             <h1 className="text-xl font-burtons">Rabiee</h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill className="cursor-pointer text-xl" />
+                <BsFillMoonStarsFill
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="cursor-pointer text-xl"
+                />
               </li>
               <li>
                 <a
@@ -31,7 +43,8 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className=" flex flex-col text-center p-10 items-center">
+          <div className="h-20"></div>
+          <div className="flex flex-col text-center p-10 items-center">
             <h2 className="text-4xl font-bold py-2 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
               Soroosh Rabiee
             </h2>
@@ -77,8 +90,8 @@ export default function Home() {
               eos quia, blanditiis nisi quae,
             </p>
           </div>
-          <div className="p-10 flex flex-row justify-center">
-            <div className="p-10 max-w-[300px] flex flex-col justify-center items-center align-middle shadow-black-xl bg-stone-800 mx-5 rounded-lg">
+          <div className="p-10 flex flex-col justify-start items-center gap-5 sm:flex-row md:flex-wrap lg:justify-center ">
+            <div className="p-10 max-w-[300px] flex flex-col justify-center items-center align-middle shadow-black-xl bg-stone-800 mx-1 rounded-lg">
               <Image src={design} width={100} height={100}></Image>
               <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
               <p className="py-2 text-center">
@@ -89,9 +102,9 @@ export default function Home() {
               <p className="text-gray-300 py-1 ">Premier</p>
               <p className="text-gray-300 py-1 ">Figma</p>
             </div>
-            <div className="p-10 max-w-[300px] flex flex-col justify-center items-center align-middle shadow-black-xl bg-stone-800 mx-5 rounded-lg">
-              <Image src={design} width={100} height={100}></Image>
-              <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
+            <div className="p-10 max-w-[300px] flex flex-col justify-center items-center align-middle shadow-black-xl bg-stone-800 mx-1 rounded-lg">
+              <Image src={consulting} width={100} height={100}></Image>
+              <h3 className="text-lg font-medium pt-8 pb-2">Consulting</h3>
               <p className="py-2 text-center">
                 Lorem ipsum dolor sit, am numquam odio molestias
               </p>
@@ -100,9 +113,9 @@ export default function Home() {
               <p className="text-gray-300 py-1 ">Premier</p>
               <p className="text-gray-300 py-1 ">Figma</p>
             </div>
-            <div className="p-10 max-w-[300px] flex flex-col justify-center items-center align-middle shadow-black-xl bg-stone-800 mx-5 rounded-lg">
-              <Image src={design} width={100} height={100}></Image>
-              <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
+            <div className="p-10 max-w-[300px] flex flex-col justify-center items-center align-middle shadow-black-xl bg-stone-800 mx-1 rounded-lg">
+              <Image src={code} width={100} height={100}></Image>
+              <h3 className="text-lg font-medium pt-8 pb-2">Code</h3>
               <p className="py-2 text-center">
                 Lorem ipsum dolor sit, am numquam odio molestias
               </p>
@@ -113,7 +126,83 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section>
+          <div>
+            <h3 className="text-4xl py-1 text-center">Portfolio</h3>
+            <p className="py-2 text-center">
+              Lorem ipsum dolor sit, am numquam odio molestias
+            </p>
+          </div>
+          <div className="flex flex-col gap-10 p-10 lg:flex-row lg:flex-wrap">
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web1}
+                alt="web"
+                className="rounded-lg  object-cover min-h-full"
+                width={"100%"}
+                objectFit="cover"
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web2}
+                alt="web"
+                className="rounded-lg object-cover min-h-full"
+                width={"100%"}
+                objectFit="cover"
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web3}
+                alt="web"
+                className="rounded-lg object-cover min-h-full"
+                width={"100%"}
+                objectFit="cover"
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web4}
+                alt="web"
+                className="rounded-lg object-cover min-h-full"
+                width={"100%"}
+                objectFit="cover"
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1  ">
+              <Image
+                src={web5}
+                alt="web"
+                className="rounded-lg object-cover min-h-full"
+                width={"100%"}
+                objectFit="cover"
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web6}
+                alt="web"
+                className="rounded-lg object-cover min-h-full"
+                width={"100%"}
+                objectFit="cover"
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+          </div>
+        </section>
       </main>
-    </>
+    </div>
   );
 }
